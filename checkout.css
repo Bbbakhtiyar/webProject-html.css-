@@ -1,0 +1,28 @@
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+#cart-table th,
+#cart-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#cart-table th {
+    background-color: #1e1e1e;
+    font-weight: bold;
+}
+
+#cart-table tr:nth-child(even) {
+    background-color: rgb(33, 33, 33);
+}
+
+#cart-table tr:hover {
+    transition: ease-in-out 0.33s;
+    background-color: #343434;
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <header>
+        <h1>Наши продукты</h1>
+        <!-- Контейнер для кнопок -->
+        <div class="header-buttons">
+            <a href="index.html" class="menu-button">В главное меню</a>
+            <a href="checkout.html" class="cart-button">Корзина</a>
+        </div>
+    </header>
+    <main>
+        <div id="popup" class="popup hidden">Продукт добавлен в корзину!</div>
+        <input type="text" class="search" placeholder="Введите наименование продукта" />
+        <section id="products">
+            <div class="product">
+                <img src="images/protein.jpeg" alt="Протеин" />
+                <h3>Протеин</h3>
+                <p>Цена: 11900 тенге</p>
+                <button class="add-to-cart" data-name="Протеин" data-price="11900">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Протеин', 'Высококачественный белок для роста мышц')">Описание</button>
+            </div>
+            <div class="product">
+                <img src="images/bcaa.jpeg" alt="BCAA" />
+                <h3>BCAA</h3>
+                <p>Цена: 3900 тенге</p>
+                <button class="add-to-cart" data-name="BCAA" data-price="3900">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('BCAA', 'Аминокислоты для восстановления и энергии')">Описание</button>
+            </div>
+            <div class="product">
+                <img src="images/creatine.jpeg" alt="Креатин" />
+                <h3>Креатин Моногидрат</h3>
+                <p>Цена: 8900 тенге</p>
+                <button class="add-to-cart" data-name="Креатин" data-price="8900">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Креатин', 'Увеличивает силу и выносливость')">Описание</button>
+            </div>
+            <!-- Новый ряд продуктов -->
+            <div class="product">
+                <img src="images/vitamins.jpeg" alt="Витамины" />
+                <h3>Витамины</h3>
+                <p>Цена: 4500 тенге</p>
+                <button class="add-to-cart" data-name="Витамины" data-price="4500">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Витамины', 'Комплекс для укрепления иммунитета')">Описание</button>
+            </div>
+            <div class="product">
+                <img src="images/gainer.jpeg" alt="Гейнер" />
+                <h3>Гейнер</h3>
+                <p>Цена: 6500 тенге</p>
+                <button class="add-to-cart" data-name="Гейнер" data-price="6500">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Гейнер', 'Идеально для набора массы')">Описание</button>
+            </div>
+            <!-- Добавляем предтренировочный комплекс в новый ряд -->
+            <div class="product">
+                <img src="images/beforetren.jpeg" alt="Предтренировочный комплекс" />
+                <h3>Предтренировочный комплекс</h3>
+                <p>Цена: 4800 тенге</p>
+                <button class="add-to-cart" data-name="Предтренировочный комплекс" data-price="4800">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Предтренировочный комплекс', 'Энергия для интенсивных тренировок')">Описание</button>
+            </div>
+            </div>
+            <div class="product">
+                <img src="images/batonchik.jpg" alt="Протеиновые батончики" />
+                <h3>Протеиновые батончики</h3>
+                <p>Цена: 5500 тенге</p>
+                <button class="add-to-cart" data-name="Протеиновые батончики" data-price="5500">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Протеиновые батончики', 'Полезный перекус для восполнения энергии')">Описание</button>
+            </div>
+            <div class="product">
+                <img src="images/fatfire.jpg" alt="Жиросжигатель" />
+                <h3>Жиросжигатель</h3>
+                <p>Цена: 7400 тенге</p>
+                <button class="add-to-cart" data-name="Жиросжигатель" data-price="7400">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Жиросжигатель', 'Ускоряет метаболизм и помогает сжигать жир')">Описание</button>
+            </div>
+            <div class="product">
+                <img src="images/omega3.jpg" alt="Омега-3" />
+                <h3>Омега-3</h3>
+                <p>Цена: 5200 тенге</p>
+                <button class="add-to-cart" data-name="Омега-3" data-price="5200">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Омега-3', 'Поддерживает здоровье сердца и суставов')">Описание</button>
+            </div>
+            <div class="product">
+                <img src="images/d3.jpg" alt="Витамин D3" />
+                <h3>Витамин D3</h3>
+                <p>Цена: 3000 тенге</p>
+                <button class="add-to-cart" data-name="Витамин D3" data-price="3000">Добавить в корзину</button>
+                <button class="details" onclick="showDetails('Витамин D3', 'Помогает укрепить кости и иммунитет')">Описание</button>
+            </div>
+            
+            <!-- Остальные продукты -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Магазин Спортпита. Все права защищены.</p>
+    </footer>
+    <script>
+        function showDetails(productName, description) {
+            alert(`${productName}: ${description}`);
+        }
+    </script>
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
