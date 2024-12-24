@@ -18,29 +18,34 @@ if (document.getElementById("cart-table")) {
     const cartBody = document.getElementById("cart-body");
     const totalElement = document.getElementById("total");
     let total = 0;
+    const names = [];
 
     // Создаем строки таблицы для каждого элемента в корзине
     cart.forEach((item, index) => {
         const row = document.createElement("tr");
+        const amount = cart.filter((element) => element.name === item.name).length;
 
-        const nameCell = document.createElement("td");
-        nameCell.textContent = item.name;
-        row.appendChild(nameCell);
+        if (!names.includes(item.name)) {
+            const nameCell = document.createElement("td");
+            nameCell.textContent = `${item.name} ${amount > 1 ? `x${amount}` : ""}`;
+            row.appendChild(nameCell);
 
-        const priceCell = document.createElement("td");
-        priceCell.textContent = `${item.price} тенге`;
-        row.appendChild(priceCell);
+            const priceCell = document.createElement("td");
+            priceCell.textContent = `${item.price} тенге`;
+            row.appendChild(priceCell);
 
-        // Добавляем кнопку удаления
-        const removeCell = document.createElement("td");
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Удалить";
-        removeButton.classList.add("remove-from-cart");
-        removeButton.addEventListener("click", () => removeFromCart(index)); // Обработчик удаления
-        removeCell.appendChild(removeButton);
-        row.appendChild(removeCell);
+            // Добавляем кнопку удаления
+            const removeCell = document.createElement("td");
+            const removeButton = document.createElement("button");
+            removeButton.textContent = "Удалить";
+            removeButton.classList.add("remove-from-cart");
+            removeButton.addEventListener("click", () => removeFromCart(index)); // Обработчик удаления
+            removeCell.appendChild(removeButton);
+            row.appendChild(removeCell);
 
-        cartBody.appendChild(row);
+            cartBody.appendChild(row);
+            names.push(item.name);
+        }
         total += item.price;
     });
 
