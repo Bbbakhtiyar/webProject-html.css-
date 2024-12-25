@@ -215,6 +215,51 @@ main {
         text-align: center;
     }
 }
+/* Секция с фотографией команды */
+.friends-section {
+    background: #1e1e1e; /* Темный фон для секции */
+    padding: 40px 20px; /* Отступы */
+    margin: 40px 0; /* Отступы сверху и снизу */
+    border-radius: 10px; /* Закругленные углы секции */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    text-align: center;
+}
+
+/* Заголовок в секции */
+.friends-section h2 {
+    font-size: 2rem;
+    color: #e0e0e0; /* Светлый текст */
+    margin-bottom: 20px;
+}
+
+/* Контейнер для фотографии и текста */
+.friends-container {
+    display: flex;
+    flex-direction: column; /* Расположение элементов по вертикали */
+    align-items: center;
+    gap: 20px; /* Отступ между изображением и текстом */
+}
+
+/* Стили для фотографии */
+.friends-photo {
+    max-width: 60%; /* Ограничиваем ширину до 60% от родительского элемента */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 15px; /* Закругленные углы фотографии */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Тень для фото */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+/* Эффект при наведении на фотографию */
+.friends-photo:hover {
+    transform: scale(1.05); /* Увеличение фотографии */
+}
+
+/* Текст под фотографией */
+.friends-container p {
+    font-size: 1.2rem;
+    color: #bdbdbd; /* Светло-серый текст */
+    margin: 0;
+}
 
 /* Центрируем текст и изображение в разделе Intro */
 .intro {
