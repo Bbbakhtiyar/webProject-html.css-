@@ -1,27 +1,26 @@
-/* Общие стили */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%; /* Устанавливаем высоту для html и body */
+    height: 100%; 
     margin: 0;
     padding: 0;
-    background: #121212; /* Темный фон */
-    color: #e0e0e0; /* Светлый текст */
+    background: #121212; 
+    color: #e0e0e0; 
     overflow-x: hidden;
     display: flex;
-    flex-direction: column; /* Выстраиваем элементы по вертикали */
+    flex-direction: column; 
 }
 
 body {
     display: flex;
-    flex-direction: column; /* Вертикальное расположение элементов */
-    justify-content: space-between; /* Фиксируем футер внизу */
+    flex-direction: column; 
+    justify-content: space-between; 
 }
 
 header {
-    background: #1e1e1e; /* Темный фон для хедера */
+    background: #1e1e1e; 
     color: #fff;
     text-align: center;
     padding: 20px 10px;
@@ -33,7 +32,7 @@ header h1 {
 }
 
 footer {
-    background: #1a1a1a; /* Темный фон футера */
+    background: #1a1a1a; 
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -44,7 +43,7 @@ footer {
 main {
     padding: 20px;
     text-align: center;
-    flex-grow: 1; /* Заставляем основной контент занимать доступное пространство */
+    flex-grow: 1; 
 }
 
 /* Кнопки */
@@ -68,20 +67,20 @@ main {
 
 /* Общие стили для кнопок */
 .header-buttons a {
-    background-color: #004f7f; /* Темно-синий фон */
-    color: white; /* Белый текст */
-    padding: 10px 20px; /* Отступы внутри кнопки */
-    text-decoration: none; /* Убираем подчеркивание */
-    border-radius: 5px; /* Закругленные углы */
-    font-weight: bold; /* Жирный шрифт */
+    background-color: #004f7f; 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
     transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход для фона и масштаба */
     margin: 0 15px 0 0;
 }
 
 /* Эффект при наведении на кнопку */
 .header-buttons a:hover {
-    background-color: #003f6b; /* Более темный оттенок синего при наведении */
-    transform: scale(1.1); /* Немного увеличиваем кнопку */
+    background-color: #003f6b; 
+    transform: scale(1.1); 
 }
 
 /* Фиксация кнопок в правом верхнем углу */
@@ -95,19 +94,19 @@ main {
 #products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Автоматическая адаптация */
-    gap: 20px; /* Расстояние между продуктами */
+    gap: 20px; 
     padding: 20px;
     text-align: center;
 }
 
 .product {
-    background: #1e1e1e; /* Темный фон для карточек */
+    background: #1e1e1e; 
     border: 1px solid #444;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Обрезаем лишнее */
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,12 +118,12 @@ main {
 }
 
 .product img {
-    width: 100%; /* Ширина изображения занимает всю карточку */
-    height: auto; /* Даем картинке поддерживать свои пропорции */
-    max-height: 200px; /* Ограничиваем максимальную высоту, чтобы картинки не выходили за пределы карточки */
-    object-fit: contain; /* Показываем изображение целиком, сохраняя пропорции */
-    object-position: center; /* Центрируем изображение внутри блока */
-    border-radius: 10px; /* Закругленные углы */
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    object-fit: contain; 
+    object-position: center; 
+    border-radius: 10px; 
     transition: transform 0.3s ease;
 }
 
@@ -156,8 +155,8 @@ main {
 /* Корзина */
 #cart-section {
     text-align: center;
-    color: #e0e0e0; /* Светлый текст */
-    padding: 20px; /* Добавляем отступы, чтобы элементы не были прижаты к краям */
+    color: #e0e0e0; 
+    padding: 20px; 
 }
 
 #cart {
@@ -174,7 +173,7 @@ main {
     margin-top: 20px;
     background: #004f7f;
     color: #fff;
-    padding: 15px 25px; /* Увеличиваем размер кнопки */
+    padding: 15px 25px; 
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
@@ -196,7 +195,7 @@ main {
     }
 
     .product {
-        width: 80%; /* Более узкие карточки на мобильных устройствах */
+        width: 80%; 
     }
 
     #cart-section {
@@ -204,60 +203,60 @@ main {
     }
 
     #completeOrder {
-        width: 100%; /* Кнопка будет занимать всю ширину на мобильных */
-        text-align: center; /* Центрируем кнопку */
+        width: 100%; 
+        text-align: center; 
     }
 
     /* Стиль для кнопки "Перейти к продуктам" на мобильных устройствах */
     .button {
-        width: 100%; /* Кнопка будет занимать всю ширину на мобильных */
+        width: 100%; 
         padding: 15px;
         text-align: center;
     }
 }
 /* Секция с фотографией команды */
 .friends-section {
-    background: #1e1e1e; /* Темный фон для секции */
-    padding: 40px 20px; /* Отступы */
-    margin: 40px 0; /* Отступы сверху и снизу */
-    border-radius: 10px; /* Закругленные углы секции */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    background: #1e1e1e; 
+    padding: 40px 20px; 
+    margin: 40px 0; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 /* Заголовок в секции */
 .friends-section h2 {
     font-size: 2rem;
-    color: #e0e0e0; /* Светлый текст */
+    color: #e0e0e0; 
     margin-bottom: 20px;
 }
 
 /* Контейнер для фотографии и текста */
 .friends-container {
     display: flex;
-    flex-direction: column; /* Расположение элементов по вертикали */
+    flex-direction: column;
     align-items: center;
-    gap: 20px; /* Отступ между изображением и текстом */
+    gap: 20px; 
 }
 
 /* Стили для фотографии */
 .friends-photo {
-    max-width: 60%; /* Ограничиваем ширину до 60% от родительского элемента */
-    height: auto; /* Сохраняем пропорции */
-    border-radius: 15px; /* Закругленные углы фотографии */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Тень для фото */
-    transition: transform 0.3s ease; /* Анимация при наведении */
+    max-width: 60%; 
+    height: auto; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease; 
 }
 
 /* Эффект при наведении на фотографию */
 .friends-photo:hover {
-    transform: scale(1.05); /* Увеличение фотографии */
+    transform: scale(1.05); 
 }
 
 /* Текст под фотографией */
 .friends-container p {
     font-size: 1.2rem;
-    color: #bdbdbd; /* Светло-серый текст */
+    color: #bdbdbd; 
     margin: 0;
 }
 
@@ -278,8 +277,8 @@ main {
 
 .intro img {
     flex: 1;
-    max-width: 50%; /* Ограничиваем ширину картинки до 50% от родительского элемента */
-    height: auto; /* Поддерживаем пропорции */
+    max-width: 50%; 
+    height: auto; 
     border-radius: 10px;
 }
 

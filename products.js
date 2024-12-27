@@ -30,5 +30,5 @@ search.addEventListener("input", (event) => {
 
 const buttons = document.querySelectorAll('.add-to-cart-btn');
 buttons.forEach(button => {
-    button.setAttribute('title', 'Добавить товар в корзину');
+    button.setAttribute('title', 'Add product to cart');
 });

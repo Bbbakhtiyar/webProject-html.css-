@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина</title>
+    <title>Basket</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
     <header>
-        <h1>Оформление заказа</h1>
+        <h1>Placing an order</h1>
     </header>
     <main>
-        <div id="popup" class="popup hidden">Продукт добавлен в корзину!</div>
+        <div id="popup" class="popup hidden">Product added to cart!</div>
         <section id="cart-section">
             <table id="cart-table">
                 <thead>
                     <tr>
-                        <td>Название товара</td>
-                        <td>Цена</td>
+                        <td>Product name</td>
+                        <td>Price</td>
                         <td>-</td>
                     </tr>                    
                 </thead>
                 <tbody id="cart-body">
-                    <!-- Здесь будут добавляться строки -->
                 </tbody>
             </table>
-            <p style="font-size: 24px; text-decoration: underline;">Итого: <span id="total">0</span> тенге</p>
-            <button id="completeOrder" style="font-size: 16px; margin-right: 15px;">Завершить покупку</button>
-            <a href="products.html" class="button" style="padding: 15px 25px;">Назад к продуктам</a>
+            <p style="font-size: 24px; text-decoration: underline;">Total: <span id="total">0</span> tenge</p>
+            <button id="completeOrder" style="font-size: 16px; margin-right: 15px;">Complete purchase</button>
+            <a href="products.html" class="button" style="padding: 15px 25px;">Back to products</a>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Магазин Спортпита. Все права защищены.</p>
+        <p>&copy; 2024 Sportpita Store. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>

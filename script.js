@@ -8,8 +8,8 @@ document.addEventListener("click", (event) => {
         const name = event.target.dataset.name;
         const price = parseInt(event.target.dataset.price);
         cart.push({ name, price });
-        localStorage.setItem("cart", JSON.stringify(cart)); // Сохраняем корзину в localStorage
-        showPopup(`${name} добавлен в корзину!`);
+        localStorage.setItem("cart", JSON.stringify(cart)); 
+        showPopup(`${name} added to cart!`);
     }
 });
 
@@ -31,15 +31,15 @@ if (document.getElementById("cart-table")) {
             row.appendChild(nameCell);
 
             const priceCell = document.createElement("td");
-            priceCell.textContent = `${item.price} тенге`;
+            priceCell.textContent = `${item.price} tenge`;
             row.appendChild(priceCell);
 
             // Добавляем кнопку удаления
             const removeCell = document.createElement("td");
             const removeButton = document.createElement("button");
-            removeButton.textContent = "Удалить";
+            removeButton.textContent = "Remove";
             removeButton.classList.add("remove-from-cart");
-            removeButton.addEventListener("click", () => removeFromCart(index)); // Обработчик удаления
+            removeButton.addEventListener("click", () => removeFromCart(index)); 
             removeCell.appendChild(removeButton);
             row.appendChild(removeCell);
 
@@ -54,24 +54,23 @@ if (document.getElementById("cart-table")) {
 
     // Завершение покупки
     document.getElementById("completeOrder").addEventListener("click", () => {
-        showPopup("Спасибо за покупку!");
+        showPopup("Thank you for your purchase!");
         cart.length = 0; // Очищаем корзину
-        localStorage.removeItem("cart"); // Удаляем корзину из localStorage
+        localStorage.removeItem("cart"); 
         setTimeout(() => {
-            location.href = "products.html"; // Перенаправление на страницу с продуктами
+            location.href = "products.html"; 
         }, 3000);
     });
 }
 
 // Функция удаления товара из корзины
 function removeFromCart(index) {
-    // Удаляем товар из массива корзины
+    
     cart.splice(index, 1);
 
-    // Обновляем localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    // Перезагружаем страницу для обновления отображения корзины
+    
     location.reload();
 }
 
